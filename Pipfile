@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 opencv-python = "*"
 numpy = "*"
-pydantic = "*"
 aiofiles = "*"
 python-multipart = "*"
 starlette = "*"
