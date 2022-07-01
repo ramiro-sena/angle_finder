@@ -1,9 +1,9 @@
 from fastapi import FastAPI, UploadFile, File
-import cv2
+
 import numpy as np
 from starlette.responses import StreamingResponse
 import io
-import time
+
 
 app = FastAPI()
 
