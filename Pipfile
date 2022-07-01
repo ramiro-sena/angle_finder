@@ -13,7 +13,6 @@ uvicorn = "*"
 
 [dev-packages]
 fastapi = "*"
-hypercorn = "*"
 
 [requires]
 python_version = "3.9"
