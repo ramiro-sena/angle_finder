@@ -10,6 +10,7 @@ pydantic = "*"
 aiofiles = "*"
 python-multipart = "*"
 starlette = "*"
+uvicorn = "*"
 
 [dev-packages]
 fastapi = "*"
