@@ -1,6 +1,1 @@
-uvicorn
-numpy
-starlette
-opencv-python
 fastapi
-aiofiles
