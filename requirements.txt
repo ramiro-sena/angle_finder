@@ -1,8 +1,6 @@
-uvicorn==0.18.2
-numpy==1.23.0
-python-multipart==0.0.5
-starlette==0.20.4
-opencv-python==4.6.0.66
-pydantic==1.9.1
-fastapi==0.78.0
-aiofiles==0.8.0
+uvicorn
+numpy
+starlette
+opencv-python
+fastapi
+aiofiles
