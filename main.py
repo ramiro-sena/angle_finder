@@ -1,7 +1,10 @@
 from fastapi import FastAPI, UploadFile, File
+from fastapi.responses import FileResponse
 import numpy as np
 import cv2
 import time
+import base64
+
 app = FastAPI()
 
 @app.get("/")
@@ -23,11 +26,8 @@ async def analyze_route(file: UploadFile = File(...)):
 
     # line that fixed it
     _, encoded_img = cv2.imencode('.PNG', gray)
-
     encoded_img = base64.b64encode(encoded_img)
 
-    return{
-        'filename': file.filename,
-        'dimensions': img_dimensions,
-        'encoded_img': endcoded_img,
+    return {
+        file.filename
     }
