@@ -21,13 +21,16 @@ async def analyze_route(file: UploadFile = File(...)):
     nparr = np.fromstring(contents, np.uint8)
     img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
 
-    img_dimensions = str(img.shape)
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    
     # line that fixed it
     _, encoded_img = cv2.imencode('.PNG', gray)
     encoded_img = base64.b64encode(encoded_img)
 
-    return {
-        file.filename
-    }
+    return """<html>
+                <img src='data:image/png;base64,"+b64+"'>
+            </html>"""
+
+        
+    
